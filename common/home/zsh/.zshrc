@@ -2,7 +2,7 @@
 # setup
 # ===
 
-ZSHHOME="$(pwd)/zsh/.zsh.d"
+ZSHHOME="$(dirname "$(readlink -f ~/.zshrc)")/.zsh.d"
 
 source "$ZSHHOME/plugins.zsh"
 source "$ZSHHOME/env.zsh"
