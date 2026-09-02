@@ -1,21 +1,21 @@
 # dotfiles
 
-This _dotfiles_ repository provides the setup for Arch Linux,Mac
+This _dotfiles_ repository provides the setup for Arch Linux and Mac.
 
 ## Overview
 
 ![](./image/top-image.png)
 
-### Enviroment
+### Environment
 
-| heading           | description                                    |
-| ----------------- | ---------------------------------------------- |
-| OS                | [Omarchy(Arch Linux)](https://omarchy.org),Mac |
-| shell             | zsh,bash                                       |
-| package manager   | brew,pacman,yay                                |
-| dotfiles manager  | GNU Stow                                       |
-| terminal emulator | kitty,ghostty                                  |
-| editor            | NeoVim,Vim                                     |
+| heading           | description                                     |
+| ----------------- | ----------------------------------------------- |
+| OS                | [Omarchy(Arch Linux)](https://omarchy.org), Mac |
+| shell             | zsh, bash                                       |
+| package manager   | brew, pacman,yay                                |
+| dotfiles manager  | GNU Stow                                        |
+| terminal emulator | kitty, ghostty                                  |
+| editor            | NeoVim, Vim                                     |
 
 ### Dotfiles structure
 
@@ -56,17 +56,9 @@ cd dotfiles
 
 1. Run `./omarchy/omarchy-setup.sh`
 
-This script does
-
-1. Install package written in `./install-packages.txt`
-
-```bash
-./omarchy/omarchy-setup.sh
-```
-
 ### Mac
 
-> No Testing due to I haven't mac enviroment at now.
+> Not tested yet, as I don't have a Mac environment currently.
 
 1. Run `./mac/mac-setup.sh`
 
@@ -76,7 +68,7 @@ This script does
 
 GNU Stow symlinks the contents of a package directory into a target directory (`$HOME`).
 The directory structure inside a package mirrors the structure it will create under `$HOME`.
-Default target direcotry is `$HOME`(specified by `.stowrc`).So if you don't run with `-t {target-directory}`,each file copied in `$HOME`.
+Default target directory is `$HOME`(specified by `.stowrc`). So if you don't run it with `-t {target-directory}`, each file will be copied into `$HOME`.
 
 ### Usage in case
 
