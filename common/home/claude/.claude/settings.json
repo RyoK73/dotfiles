@@ -1,0 +1,115 @@
+{
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
+  "permissions": {
+    "allow": [
+      "mcp__voicevox__speak",
+      "Read",
+      "Bash(ls *)",
+      "Bash(grep *)",
+      "Bash(find *)",
+      "Bash(gh pr view*)",
+      "Bash(gh pr checks*)",
+      "Bash(gh pr diff*)",
+      "Bash(gh repo view*)",
+      "Bash(gh run list*)",
+      "Bash(gh run view*)",
+      "Bash(gh issue view*)",
+      "Bash(gh issue list*)",
+      "Bash(gh label list*)",
+      "Bash(gh release list*)",
+      "Bash(gh release view*)",
+      "Bash(gh pr create*)",
+      "Bash(gh pr comment*)",
+      "Bash(gh pr review*)",
+      "Bash(gh pr ready*)",
+      "Bash(gh issue create*)",
+      "Bash(gh issue edit*)",
+      "Bash(gh issue comment*)",
+      "Bash(gh issue close*)",
+      "Bash(gh issue reopen*)",
+      "Bash(gh label create*)",
+      "Bash(gh label edit*)",
+      "Bash(for *)",
+      "Edit($HOME/.claude/discussion-history)",
+      "WebSearch"
+    ],
+    "deny": [
+      "Bash(gh issue delete*)",
+      "Bash(gh pr merge*)",
+      "Bash(gh repo delete*)",
+      "Bash(gh secret *)",
+      "Bash(gh release create*)",
+      "Read(./.env)"
+    ],
+    "defaultMode": "default"
+  },
+  "model": "sonnet",
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "paplay --volume=65000 $HOME/.claude/notification-sound/stop.mp3"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "paplay --volume=65000 $HOME/.claude/notification-sound/notification.mp3"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/pipe-stage-permission.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "commit-commands@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "lua-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/JuliusBrussee/caveman.git"
+      }
+    }
+  },
+  "language": "japanese",
+  "effortLevel": "medium",
+  "tui": "default",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "theme": "dark-ansi",
+  "autoCompactEnabled": true,
+  "voiceEnabled": true,
+  "agentPushNotifEnabled": true
+}
