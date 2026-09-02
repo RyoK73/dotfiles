@@ -1,0 +1,6 @@
+--target=~/
+
+# figure order
+#1. cwd's `.stowrc` (order: low)
+#2. `~/.stowrc` (order: medium)
+#3. `-t {directory}`option (order: high)
