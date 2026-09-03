@@ -1,8 +1,0 @@
-
-# NVIDIA
-env = NVD_BACKEND,direct
-env = LIBVA_DRIVER_NAME,nvidia
-env = __GLX_VENDOR_LIBRARY_NAME,nvidia
-
-# MOUSE
-env = XCURSOR_SIZE,48

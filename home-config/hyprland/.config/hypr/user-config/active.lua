@@ -1,1 +1,0 @@
-require("hosts.omarchy-desktop")
