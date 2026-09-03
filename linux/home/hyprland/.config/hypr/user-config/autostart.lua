@@ -1,0 +1,12 @@
+-- # exec-once = uwsm-app -- my-service
+-- exec-once = [workspace 1 silent] kitty # workspace 1でkittyを自動起動
+-- # exec-once = [workspace 5 silent] lutris # workspace 4でlutrisを自動起動
+-- exec-once = [workspace 6 silent] kitty # workspace 5でkittyを自動起動
+-- exec-once = [workspace 8 silent] spotify # workspace 8でspotifyを自動起動
+-- # exec-once = [workspace 10 silent] voicevox # workspace 10でvoicevoxを自動起動
+local appArr = { "uwsm-app", "spotify" }
+for i = 1, #appArr do
+	hl.on("hyprland.start", function()
+		hl.exec_cmd(appArr[i])
+	end)
+end
