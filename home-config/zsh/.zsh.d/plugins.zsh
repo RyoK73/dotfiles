@@ -11,6 +11,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz compinit && compinit
 zinit light zsh-users/zsh-completions
 
+_comp_options+=(globdots)
+
 zinit light Aloxaf/fzf-tab # tabでファイル検索
 
 # aliasをexpand
@@ -22,6 +24,3 @@ zinit light MenkeTechnologies/zsh-expand
 
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
-
-# ZSH_AUTOSUGGESTIONで隠しファイルを表示する
-ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(expand-or-complete)
