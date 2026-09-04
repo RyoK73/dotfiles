@@ -56,6 +56,11 @@ cd dotfiles
 
 1. Run `./install-package/mac-setup.sh`
 
+## Utility aliases and functions
+
+- `sysup`: Update `zinit` and `pacman`.
+- `dcd`: Change directory to the `dotfiles` repository , resolved from the `~/.zshrc` symlink path.
+
 ## Usage for GNU Stow
 
 ### Basic concept

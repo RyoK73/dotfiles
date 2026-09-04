@@ -52,6 +52,14 @@ function gcd() {
 }
 
 # ---
+# dotfilesリポジトリへ移動する
+# ---
+function dcd() {
+	cd $(dirname "$(readlink -f ~/.zshrc)")
+	gcd
+}
+
+# ---
 # Git remoteでマージ済みのローカルブランチを削除する
 # ---
 function git-cleanup() {

@@ -9,6 +9,7 @@ alias cat="bat"
 alias xopen="xdg-open"
 alias cdnv="cd $HOME/.config/nvim/lua/plugins"
 alias killport="fuser -k 3000/tcp 2>/dev/null"
+alias sysup="sudo pacman -Syu && zinit self-update && zinit update --all"
 
 # ===
 # ファイル操作
