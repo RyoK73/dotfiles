@@ -21,24 +21,18 @@ This _dotfiles_ repository provides the setup for Arch Linux and Mac.
 
 ```bash
 .
-├── LICENSE # MIT
+├── LICENSE
 ├── README.md
-├── doc # Document for understanding command,dotfiles...
-├── install-packages.txt # Tools I use
-├── common # For both of Linux,Mac setup
-│   ├── home # For Based on $HOME files
-│   └── root # For Based on root files (ex: /etc/keyd/default.conf)
+├── doc
+│   ├── FAQ.md
+│   └── pacman-usage.md
 ├── image
-│   ├── personal
-│   └── top-image.png
-├── linux # For Linux setup
-│   ├── omarchy-setup.sh
-│   ├── home
-│   └── root
-└── mac # For Mac setup
-    ├── mac-setup.sh
-    ├── home
-    └── root
+├── install-package # for install packages
+│   ├── install-packages.txt
+│   ├── mac-setup.sh
+│   └── omarchy-setup.sh
+├── home-config # for symlink based on $HOME
+└── root-config # for symlink based on /
 ```
 
 ## Installation
@@ -54,13 +48,13 @@ cd dotfiles
 
 ### Omarchy
 
-1. Run `./omarchy/omarchy-setup.sh`
+1. Run `./install-package/omarchy-setup.sh`
 
 ### Mac
 
 > Not tested yet, as I don't have a Mac environment currently.
 
-1. Run `./mac/mac-setup.sh`
+1. Run `./install-package/mac-setup.sh`
 
 ## Usage for GNU Stow
 
@@ -117,7 +111,7 @@ Move the existing file (or directory) into the package directory, keeping the sa
 
 ```bash
 cd {your-dotfiles-path}
-mkdir -p common/nvim/.config
+mkdir -p ./home-config/nvim/.config
 ```
 
 > `mkdir -p {management-directory}/{path-from-$HOME}`
@@ -125,17 +119,19 @@ mkdir -p common/nvim/.config
 2. Copy existing files
 
 ```bash
-cp -r ~/.config/nvim ./common/home/nvim/.config/
+cp -r ~/.config/nvim ./home-config/nvim/.config/
 ```
 
 #### Add symbolic link
+
+**If the target files already exist on target directory, use `stow --adopt`.**
 
 If the package directory already exists in the repository but hasn't been symlinked yet (e.g. after a fresh `git clone`), just run `stow` for it.
 
 **If you copied existing files, commit the changes before running `stow`.**
 
 ```bash
-stow -d ./common/home nvim
+stow -d ./home-config nvim
 ```
 
 > `stow -d {parent directory of target} {target}`
@@ -146,7 +142,7 @@ When setting up a fresh environment (e.g. after reinstalling Linux), the target 
 Since plain `stow` fails on conflicting files, use `--adopt` to pull them into the repository, then discard that change with `git checkout` so your dotfiles win.
 
 ```bash
-stow --adopt -d ./common/home nvim
+stow --adopt -d ./home-config nvim
 git checkout -- .
 ```
 
@@ -158,7 +154,7 @@ git checkout -- .
 Pass `-D` to `stow` to remove the symlinks for a package without deleting the files in the repository.
 
 ```bash
-stow -D -d ./common/home nvim
+stow -D -d ./home-config nvim
 ```
 
 #### Show list of existing symbolic link
