@@ -46,15 +46,25 @@ git clone https://github.com/RyoK73/dotfiles.git
 cd dotfiles
 ```
 
-### Omarchy
+2. Install packages.
 
-1. Run `./install-package/omarchy-setup.sh`
+- Arch Linux(`pacman`): Run `./install-package/omarchy-setup.sh`
+- Mac(`brew`): Run `./install-package/mac-setup.sh`
 
-### Mac
+3. Add symlinks
 
-> Not tested yet, as I don't have a Mac environment currently.
-
-1. Run `./install-package/mac-setup.sh`
+- To `$HOME/`:
+  ```bash
+  cd ./home-config
+  stow --adopt {symlink name},{symlink name},{symlink name}...
+  git checkout -- .
+  ```
+- To `/`(need Administrator Permission):
+  ```bash
+  cd ./root-config
+  sudo stow --adopt {symlink name},{symlink name},{symlink name}...
+  git checkout -- .
+  ```
 
 ## Utility aliases and functions
 
