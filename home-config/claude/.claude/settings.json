@@ -41,7 +41,8 @@
       "Bash(gh repo delete*)",
       "Bash(gh secret *)",
       "Bash(gh release create*)",
-      "Read(./.env)"
+      "Read(./.env)",
+      "Bash(sudo *)"
     ],
     "defaultMode": "default"
   },
