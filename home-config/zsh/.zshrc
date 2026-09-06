@@ -26,7 +26,3 @@ case ":$PATH:" in
 *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
-
-# gists-tips-manager
-source "/home/taruroma/dev/gists-tips-manager/scripts/gists-tips-manager.zsh"
-# gists-tips-managerA end
