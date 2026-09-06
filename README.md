@@ -27,12 +27,14 @@ This _dotfiles_ repository provides the setup for Arch Linux and Mac.
 │   ├── FAQ.md
 │   └── pacman-usage.md
 ├── image
-├── install-package # for install packages
-│   ├── install-packages.txt
-│   ├── mac-setup.sh
-│   └── omarchy-setup.sh
+├── install-packages.txt # install packages list
 ├── home-config # for symlink based on $HOME
-└── root-config # for symlink based on /
+├── root-config # for symlink based on /
+└── scripts
+    ├── add-symlink.sh # symlink install script
+    └── install-package.sh # package install script
+
+22 directories, 14 files
 ```
 
 ## Installation
