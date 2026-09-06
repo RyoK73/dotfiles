@@ -5,6 +5,7 @@
 # ===
 alias ccr="claude -r"
 alias ccc="claude -c"
+alias cce="claude /check-commit-en --name 'コミットの英語チェック'"
 
 # ===
 # function
