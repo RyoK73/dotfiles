@@ -11,15 +11,24 @@ return {
       markdown_oxide = {
         filetypes = { "markdown", "gitcommit" },
       },
-      ts_ls = {
-        init_options = {
-          preferences = {
-            importModuleSpecifierPreference = "non-relative", -- "non-relative" や "project-relative" も可
-            includeCompletionsForModuleExports = true,
-            includeCompletionsForImportStatements = true,
+      vtsls = {
+        settings = {
+          typescript = {
+            preferences = {
+              importModuleSpecifier = "non-relative",
+            },
           },
         },
       },
+      -- ts_ls = {
+      --   init_options = {
+      --     preferences = {
+      --       importModuleSpecifierPreference = "non-relative", -- "non-relative" や "project-relative" も可
+      --       includeCompletionsForModuleExports = true,
+      --       includeCompletionsForImportStatements = true,
+      --     },
+      --   },
+      -- },
     },
   },
 }
