@@ -20,20 +20,7 @@ vim.keymap.set("n", "<leader>a", function()
   vim.fn.setreg("+", "@" .. path .. " #" .. line .. " ")
   print("Copied @" .. path .. " #" .. line)
 end, { desc = "Copy filename:line to clipboard" })
--- 背景を透過
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
--- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
--- vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
--- vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
--- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
--- vim.cmd([[ highlight Normal guibg=none
---   highlight NonText guibg=none
---   highlight Normal ctermbg=none
---   highlight NonText ctermbg=none
---   highlight NormalNC guibg=none
---   highlight NormalSB guibg=none
--- ]])
+
 local groups = {
   "Normal",
   "NormalNC",
@@ -44,6 +31,8 @@ local groups = {
   "EndOfBuffer",
   "FoldColumn",
   "Folded",
+  "StatusLine",
+  "StatusLineNC",
   -- カーソル行・カラム
   "CursorLine",
   "CursorColumn",
