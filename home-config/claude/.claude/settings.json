@@ -111,6 +111,6 @@
   },
   "theme": "dark-ansi",
   "autoCompactEnabled": true,
-  "voiceEnabled": true,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "voiceEnabled": true
 }
