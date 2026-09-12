@@ -16,6 +16,7 @@ return {
           typescript = {
             preferences = {
               importModuleSpecifier = "non-relative",
+              useAliasesForRenames = false,
             },
           },
         },
