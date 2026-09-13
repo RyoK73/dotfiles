@@ -9,10 +9,10 @@ return {
       },
       sections = {
         lualine_a = { "mode" },
-        lualine_b = { "diagnostics", { "filetype", icon_only = true }, { "filename", path = 1 } },
+        lualine_b = { "diagnostics", { "filetype", icon_only = true }, { "filename", path = 2 } },
         lualine_c = {},
-        lualine_x = {},
-        lualine_y = {},
+        lualine_x = { "diff" },
+        lualine_y = { "branch" },
         lualine_z = { "progress" },
       },
       --[[add your custom lualine config here]]
