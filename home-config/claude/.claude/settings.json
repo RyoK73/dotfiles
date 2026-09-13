@@ -112,5 +112,10 @@
   "theme": "dark-ansi",
   "autoCompactEnabled": true,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "low"
+    }
+  }
 }
