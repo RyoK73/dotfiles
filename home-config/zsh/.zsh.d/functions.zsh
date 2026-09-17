@@ -1,3 +1,11 @@
+# ---
+# dotfilesリポジトリへ移動する
+# ---
+function dcd() {
+	cd $(dirname "$(readlink -f ~/.zshrc)")
+	gcd
+}
+
 # 指定 or カレントディレクトリをツリー表示する
 function trc() {
 	local dir="$1"
