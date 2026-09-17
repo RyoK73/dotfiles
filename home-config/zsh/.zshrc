@@ -12,6 +12,7 @@ source "$ZSHHOME/prompt.zsh"
 source "$ZSHHOME/git.zsh"
 source "$ZSHHOME/claude.zsh"
 source "$ZSHHOME/keymap.zsh"
+source "$ZSHHOME/zk.zsh"
 
 HISTFILE=~/.histfile
 HISTSIZE=10000
