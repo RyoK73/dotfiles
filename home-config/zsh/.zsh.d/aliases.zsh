@@ -29,3 +29,8 @@ alias nv="nvim"
 alias waybar-reload="pkill waybar && waybar & disown"
 alias hypr-reload="hyprctl reload"
 alias mozc-setup="fcitx5-config-qt"
+
+# ===
+# zk
+# ===
+alias zknt="zk new --title"
