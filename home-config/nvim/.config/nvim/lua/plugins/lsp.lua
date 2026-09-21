@@ -12,6 +12,11 @@ return {
         filetypes = { "markdown", "gitcommit" },
       },
       vtsls = {
+        experimental = {
+          completion = {
+            enableServerSideFuzzyMatch = true,
+          },
+        },
         settings = {
           typescript = {
             preferences = {

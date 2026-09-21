@@ -3,6 +3,11 @@ return {
     "saghen/blink.cmp",
     opts = {
       lazy = false,
+      completion = {
+        trigger = {
+          prefetch_on_insert = false,
+        },
+      },
       keymap = {
         ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
         ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
