@@ -3,7 +3,7 @@
 # ===
 # 便利系
 # ===
-alias -s {md,lua,ts,tsx,js,jsx,json,jsonc,conf,toml,yaml,yml,toml,html,css,zshrc}=$EDITOR
+alias -s {md,lua,ts,tsx,js,jsx,json,jsonc,conf,toml,yaml,yml,toml,html,css,zshrc,zsh}=$EDITOR
 alias npm="pnpm"
 alias cat="bat"
 alias xopen="xdg-open"
