@@ -67,17 +67,24 @@ function git-cleanup() {
 # git worktree
 # ===
 
-function gitp() {
+# ---
+# Create new git worktree as ${project-name}-${branch-name} and create new directory.
+# ---
+alias gitp="git-worktree-plant"
+function git-worktree-plant() {
 	if ! git rev-parse --git-dir &>/dev/null; then
-		echo "not a git directory"
+		echo "Error: It is not Git directory here"
 		return
 	elif ! git rev-parse HEAD --git-dir &>/dev/null; then
-		echo "commitがありません"
+		echo "Error: There is no commit. Commit something to the main branch first."
 		return
 	elif [[ -z "$1" ]]; then
-		echo "ブランチ名を指定してください"
+		echo "Error: Need the branch name"
 		return
 	fi
+
+	# Move to the project root directory.
+	gcd
 
 	git pull --rebase origin main
 
@@ -86,13 +93,11 @@ function gitp() {
 
 	local branchdir="../$repo-$1"
 	git worktree add -b "$1" "$branchdir" # mainからではなく現ブランチから生成する
+
+	cp .env* "$branchdir/" # Copy .env files that written in .gitignore.
 	cd "$branchdir"
 
 	git push # 作成したブランチのままremoteへpush(要upstream)
-
-	if [[ -n "$2" ]]; then
-		bash "$HOME/.claude/skills/project-sync/scripts/sync.sh" start "$2"
-	fi
 }
 
 # ---
