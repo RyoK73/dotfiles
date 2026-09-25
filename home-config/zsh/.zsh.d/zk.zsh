@@ -13,7 +13,7 @@ if [[ ! -d "$zk_document_stored_dir" ]];then
 fi	
 
 alias zkn="zk-new-title"
-alias zke="zk edit"
+alias zke="zk edit --interactive"
 # ---
 # Create a new md file into the zkhub directory
 # ---
