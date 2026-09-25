@@ -5,7 +5,7 @@ return {
       enabled = true,
     },
     messages = {
-      enabled = true,
+      enabled = false,
     },
   },
 }
