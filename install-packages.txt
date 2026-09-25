@@ -59,3 +59,4 @@ yq
 zoxide
 zsh
 stow
+prismlaucher
