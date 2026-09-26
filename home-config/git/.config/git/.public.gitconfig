@@ -13,6 +13,7 @@
 	colorMoved = plain       # Highlight moved blocks in diffs
 	mnemonicPrefix = true    # More intuitive refs in diff output
 [commit]
+	template = ~/.gitmessage
 	verbose = true           # Include diff comment in commit message template
 [column]
 	ui = auto 			     # Output in columns when possible
