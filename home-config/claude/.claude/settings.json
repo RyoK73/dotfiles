@@ -47,15 +47,6 @@
     ],
     "defaultMode": "default"
   },
-  "sandbox": {
-    "enabled": false,
-    "autoAllowBashIfSandboxed": false,
-    "allowUnsandboxedCommands": false,
-    "filesystem": {
-      "denyRead": ["**/.env", "**/.env.*"]
-    },
-    "excludedCommands": ["git *,gh *"]
-  },
   "model": "sonnet",
   "hooks": {
     "Stop": [
@@ -117,7 +108,27 @@
     }
   },
   "language": "japanese",
+  "sandbox": {
+    "enabled": false,
+    "autoAllowBashIfSandboxed": false,
+    "allowUnsandboxedCommands": false,
+    "filesystem": {
+      "denyRead": [
+        "**/.env",
+        "**/.env.*"
+      ]
+    },
+    "excludedCommands": [
+      "git *,gh *"
+    ]
+  },
   "effortLevel": "medium",
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "low"
+    }
+  },
+  "promptSuggestionEnabled": false,
   "tui": "default",
   "voice": {
     "enabled": true,
@@ -126,10 +137,5 @@
   "theme": "dark-ansi",
   "autoCompactEnabled": true,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true,
-  "modelSettings": {
-    "claude-sonnet-5": {
-      "effortLevel": "low"
-    }
-  }
+  "voiceEnabled": true
 }
