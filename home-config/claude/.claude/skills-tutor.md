@@ -45,10 +45,11 @@
 | スキル | 引数 | 説明 |
 |---|---|---|
 | /task-plan | [issue番号・URL（省略可）] | 現ブランチ・issue消化タスクを詳細洗い出し、docs/task/{branch}-task.mdにチェックボックス形式で保存。進捗管理も兼ねる |
-| /pr-review | [PRタイトルのヒント] | 変更の意図・設計を壁打ちし、5観点レビュー後にPR下書き作成 |
+| /pr-review | [PRタイトルのヒント] | 変更の意図・設計を壁打ちし、5観点レビュー後にPR下書き作成。指摘には根拠（確認済み / 推測）を付け、静的検査・呼び出し元・関連定義を確認してから書く。レポートはファイル別に指摘を列記し、本体の `.git/pr-reviews/{branch}_日時.md` にも保存（コミット対象外） |
 | /post-review | [記事ファイルパス or slug] | ブログ記事を5軸で監査。公開前の品質チェック |
 | /design-md | [参考UI/サービス名やURL（省略可）] | Stitch仕様のDESIGN.md生成。コード解析＋参考UI調査＋対話でトークン抽出 |
 | /translate-to-english | [ファイル・ディレクトリパス（省略可）] | 日本語のコメント・docstring・文字列を英訳しレビュー後コミット。省略時は未コミット変更全体が対象 |
+| /check-document-en | [英文ドキュメント本文] | 英文の文法・自然さをチェック。修正文→追記案→指摘→文法ポイントの順で出力 |
 
 ## その他
 
@@ -87,3 +88,4 @@
 - `~/.claude/skills/post-review/SKILL.md`
 - `~/.claude/skills/design-md/SKILL.md`
 - `~/.claude/skills/translate-to-english/SKILL.md`
+- `~/.claude/skills/check-document-en/SKILL.md`
