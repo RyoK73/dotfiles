@@ -11,6 +11,9 @@ return {
       markdown_oxide = {
         filetypes = { "markdown", "gitcommit" },
       },
+      postgres_lsp = {
+        filetypes = { "sql" },
+      },
       vtsls = {
         experimental = {
           completion = {
@@ -22,6 +25,7 @@ return {
             preferences = {
               importModuleSpecifier = "non-relative",
               useAliasesForRenames = false,
+              autoImportSpecifierExcludeRegexes = { "^fabric/node$" },
             },
           },
         },
