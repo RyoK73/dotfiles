@@ -103,7 +103,8 @@ function git-worktree-plant() {
 # ---
 # merge済みのgit worktreeを削除する
 # ---
-function gitc() {
+alias gitc="git-worktree-cut"
+function git-worktree-cut() {
 	git fetch --prune
 	git branch -vv | grep ': gone' | awk '{
     if ($1 == "+") {
