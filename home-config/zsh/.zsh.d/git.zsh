@@ -106,6 +106,9 @@ function git-worktree-plant() {
 alias gitc="git-worktree-cut"
 function git-worktree-cut() {
 	git fetch --prune
+
+	git pull --rebase origin main
+
 	git branch -vv | grep ': gone' | awk '{
     if ($1 == "+") {
       gsub(/[()]/,"",$4); print $2,$4
