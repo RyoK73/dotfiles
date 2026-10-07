@@ -38,6 +38,11 @@ alias gss="git stash push -m"
 alias gsp="git stash pop"
 alias gsl="git stash list"
 
+# ---
+# gh-dash
+# ---
+alias ghd="gh dash"
+
 # ===
 # function
 # ===
