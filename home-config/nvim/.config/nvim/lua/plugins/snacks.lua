@@ -2,7 +2,7 @@ return {
   "folke/snacks.nvim",
   opts = {
     explorer = { enabled = true },
-    notifier = { enabled = true },
+    notifier = { enabled = false },
     picker = {
       win = {
         input = {
