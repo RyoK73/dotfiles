@@ -11,8 +11,8 @@ return {
         lualine_a = { "mode" },
         lualine_b = { "diff" },
         lualine_c = { "diagnostics", { "filetype", icon_only = true }, { "filename", path = 2 } },
-        lualine_x = { "searchcount", "lsp_status" },
-        lualine_y = { "location" },
+        lualine_x = { "searchcount" },
+        lualine_y = { "selectioncount", "location" },
         lualine_z = { "progress" },
       },
       --[[add your custom lualine config here]]
