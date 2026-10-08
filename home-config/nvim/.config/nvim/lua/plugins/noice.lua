@@ -39,7 +39,7 @@ return {
       },
       cmdline = {},
       cmdline_output = {
-        timeout = "2000",
+        timeout = "1000",
       },
       cmdline_popup = {
         position = { row = "40%", col = "50%" },
