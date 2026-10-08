@@ -4,7 +4,7 @@ return {
   opts = function()
     return {
       options = {
-        theme = "auto",
+        theme = "material",
         globalstatus = true,
       },
       sections = {
