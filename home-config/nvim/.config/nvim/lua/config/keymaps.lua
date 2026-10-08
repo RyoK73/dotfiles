@@ -8,6 +8,14 @@ vim.keymap.set("n", "U", "<C-r>", { desc = "redo" })
 vim.keymap.set("n", "<enter>", "o", { desc = "line break" })
 vim.keymap.set("n", "<BS>", "X", { desc = "Back Space" })
 vim.keymap.set("n", "<Del>", "x", { desc = "Delete" })
+-- Claude Codeに渡すために現在開いているファイル名と行番号をクリップボードにコピーする
+vim.keymap.set("n", "ga", function()
+  local path = vim.fn.expand("%:p")
+  local line = vim.fn.line(".")
+  vim.fn.setreg("+", "@" .. path .. ":" .. line .. " ")
+  print("Copied @" .. path .. " #" .. line)
+  print("")
+end, { desc = "Copy filename:line to clipboard" })
 
 -- rename
 vim.keymap.set("n", "<leader>rn", ":IncRename")

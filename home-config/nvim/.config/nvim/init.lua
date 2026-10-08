@@ -13,13 +13,6 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.expandtab = false
   end,
 })
--- Claude Codeに渡すために現在開いているファイル名と行番号をクリップボードにコピーする
-vim.keymap.set("n", "<leader>a", function()
-  local path = vim.fn.expand("%:p")
-  local line = vim.fn.line(".")
-  vim.fn.setreg("+", "@" .. path .. " #" .. line .. " ")
-  print("Copied @" .. path .. " #" .. line)
-end, { desc = "Copy filename:line to clipboard" })
 
 local groups = {
   "Normal",
