@@ -11,42 +11,41 @@ return {
     messages = {
       enabled = true,
       view = "cmdline_output",
-    },
-    notify = {
-      enabled = true,
-      view = "popup",
-    },
+    }, -- コピー時等の表示に影響する
+    -- notify = {
+    --   enabled = true,
+    --   view = "popup",
+    -- }, -- Shift+kの型情報表示に影響する
     redirect = {
       view = "split",
     },
-    commands = {
-      history = {
-        view = "split",
-      },
-      last = {
-        view = "split",
-      },
-      errors = {
-        view = "split",
-      },
-      all = {
-        view = "split",
-      },
-    },
+    -- commands = {
+    --   history = {
+    --     view = "split",
+    --   },
+    --   last = {
+    --     view = "split",
+    --   },
+    --   errors = {
+    --     view = "split",
+    --   },
+    --   all = {
+    --     view = "split",
+    --   },
+    -- },
     views = {
       messages = {
         enter = false,
       },
       cmdline = {},
       cmdline_output = {
-        timeout = "1000",
+        timeout = "1500",
+        size = "5%",
       },
       cmdline_popup = {
         position = { row = "40%", col = "50%" },
       },
-      split = {
-        size = "20%",
-      },
+      split = {},
     },
   },
 }
