@@ -1,6 +1,6 @@
 return {
   "okuuva/auto-save.nvim",
-  event = { "InsertLeave", "FocusLost" },
+  event = { "FocusLost" },
   opts = {
     enabled = true,
     debounce_delay = 3000,
