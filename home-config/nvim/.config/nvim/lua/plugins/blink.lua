@@ -3,6 +3,7 @@ return {
   lazy = false,
   opts = {
     completion = {
+      list = { selection = { auto_insert = false } },
       trigger = {
         prefetch_on_insert = false,
       },
