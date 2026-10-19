@@ -114,14 +114,9 @@
     "autoAllowBashIfSandboxed": false,
     "allowUnsandboxedCommands": false,
     "filesystem": {
-      "denyRead": [
-        "**/.env",
-        "**/.env.*"
-      ]
+      "denyRead": ["**/.env", "**/.env.*"]
     },
-    "excludedCommands": [
-      "git *,gh *"
-    ]
+    "excludedCommands": ["git *,gh *"]
   },
   "effortLevel": "medium",
   "modelSettings": {
