@@ -33,6 +33,7 @@
       "Bash(gh label edit*)",
       "Bash(for *)",
       "Edit($HOME/.claude/discussion-history)",
+      "Edit(**/.git/**/**)",
       "WebSearch",
       "WebFetch(domain:github.com)"
     ],
