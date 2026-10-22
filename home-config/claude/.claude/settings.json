@@ -133,5 +133,9 @@
   "theme": "dark-ansi",
   "autoCompactEnabled": true,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  }
 }
