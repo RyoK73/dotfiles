@@ -9,7 +9,8 @@
 | /map | [@ファイル（省略可）] | 頭の霧を晴らし課題を具体化。ドキュメント＆GitHub Issue保存 |
 | /retro | [実装・設計] | 実装後の振り返り。狂言・能口調で設計と判断を共に見直す |
 | /launch | [プロジェクト名] | MVPキックオフ。目標→設計→タスク分解→実行ランウェイ生成 |
-| /grill-me | — | 実装の壁打ち。決定木を辿ってインタビューし、.git/grill-me/ に必ず保存して保存先を案内した後、claude実装か自力実装かを選べる |
+| /grill-me-develop | — | 実装の壁打ち。決定木を辿ってインタビューし、リスクの高い部分のテスト項目を確定。.git/grill-me/ に必ず保存して保存先を案内した後、claude実装か自力実装かを選べる |
+| /grill-me-simple | — | 実装の壁打ち（簡易版）。決定木を辿ってインタビューするのみ。テスト項目の確定・保存・実装は行わない |
 
 ## ナレッジ管理
 
@@ -19,7 +20,7 @@
 | /zettel | [テーマ] | 永続ノート（Zettelkasten）作成 |
 | /devnote | [範囲・内容] | 開発メモ・デバッグ解決策を literature/ に保存 |
 | /capture | [内容] | 思いつきをすぐInboxへ。対話不要 |
-| /insights | — | GTD＋Zettelkastenデータを分析してパターンを可視化 |
+| /analyzeGTD | — | GTD＋Zettelkastenデータを分析してパターンを可視化 |
 
 ## GTD・タスク管理
 
@@ -48,6 +49,7 @@
 | /pr-review | [PRタイトルのヒント] | 変更の意図・設計を壁打ちし、5観点レビュー後にPR下書き作成。指摘には根拠（確認済み / 推測）を付け、静的検査・呼び出し元・関連定義を確認してから書く。レポートはファイル別に指摘を列記し、本体の `.git/pr-reviews/{branch}_日時.md` にも保存（コミット対象外） |
 | /post-review | [記事ファイルパス or slug] | ブログ記事を5軸で監査。公開前の品質チェック |
 | /design-md | [参考UI/サービス名やURL（省略可）] | Stitch仕様のDESIGN.md生成。コード解析＋参考UI調査＋対話でトークン抽出 |
+| /git-commit | [wip（省略可）] | ステージ済みの変更から `~/.gitmessage` 準拠の英語コミットメッセージ案を作り、確認後にコミット。pushは対象外 |
 | /translate-to-english | [ファイル・ディレクトリパス（省略可）] | 日本語のコメント・docstring・文字列を英訳しレビュー後コミット。省略時は未コミット変更全体が対象 |
 | /check-document-en | [英文ドキュメント本文] | 英文の文法・自然さをチェック。修正文→追記案→指摘→文法ポイントの順で出力 |
 
@@ -55,6 +57,7 @@
 
 | スキル | 引数 | 説明 |
 |---|---|---|
+| /create-issue | — | 単発のGitHub Issueを1件作成。タイトル・本文・ラベル案を確認後 `gh issue create` で作成 |
 | /create-issues | — | /map や /launch で練った構想をGitHub Issuesに一括作成 |
 
 ## スキルの追加・変更・削除
@@ -67,12 +70,13 @@
 - `~/.claude/skills/map/SKILL.md`
 - `~/.claude/skills/retro/SKILL.md`
 - `~/.claude/skills/launch/SKILL.md`
-- `~/.claude/skills/grill-me/SKILL.md`
+- `~/.claude/skills/grill-me-develop/SKILL.md`
+- `~/.claude/skills/grill-me-simple/SKILL.md`
 - `~/.claude/skills/research/SKILL.md`
 - `~/.claude/skills/zettel/SKILL.md`
 - `~/.claude/skills/devnote/SKILL.md`
 - `~/.claude/skills/capture/SKILL.md`
-- `~/.claude/skills/insights/SKILL.md`
+- `~/.claude/skills/analyzeGTD/SKILL.md`
 - `~/.claude/skills/morning/SKILL.md`
 - `~/.claude/skills/daily-log/SKILL.md`
 - `~/.claude/skills/weekly-review/SKILL.md`
@@ -82,6 +86,7 @@
 - `~/.claude/skills/job-track/SKILL.md`
 - `~/.claude/skills/interview-prep/SKILL.md`
 - `~/.claude/skills/curriculum/SKILL.md`
+- `~/.claude/skills/create-issue/SKILL.md`
 - `~/.claude/skills/create-issues/SKILL.md`
 - `~/.claude/skills/task-plan/SKILL.md`
 - `~/.claude/skills/pr-review/SKILL.md`
@@ -89,3 +94,4 @@
 - `~/.claude/skills/design-md/SKILL.md`
 - `~/.claude/skills/translate-to-english/SKILL.md`
 - `~/.claude/skills/check-document-en/SKILL.md`
+- `~/.claude/skills/git-commit/SKILL.md`
