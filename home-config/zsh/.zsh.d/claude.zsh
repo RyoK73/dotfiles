@@ -6,6 +6,7 @@
 alias ccr="claude -r"
 alias ccc="claude -c"
 alias cce="claude /check-document-en --name '英語チェック'"
+alias ccg="claude /git-commit --name 'Git Commit by Claude Code'"
 
 # ===
 # function
