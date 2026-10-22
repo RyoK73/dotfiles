@@ -33,7 +33,9 @@
       "Bash(gh label edit*)",
       "Bash(for *)",
       "Edit($HOME/.claude/discussion-history)",
-      "Edit(**/.git/**/**)",
+      "Edit(**/.git/pr-review/**/*.md)",
+      "Edit(**/.git/grill-me/**/*.md)",
+      "Edit(~/dev/zkhub/**/*.md)",
       "WebSearch",
       "WebFetch(domain:github.com)"
     ],
