@@ -39,6 +39,7 @@
       "WebSearch",
       "WebFetch(domain:github.com)"
     ],
+    "ask": ["Bash(python3*)", "Bash(sed -i*)", "Bash(sh -c*)"],
     "deny": [
       "Bash(gh issue delete*)",
       "Bash(gh pr merge*)",
