@@ -22,6 +22,7 @@ alias lsc="ls -a1 | cat"
 # ===
 alias hx="helix"
 alias nv="nvim"
+alias hd="herdr"
 
 # ===
 # ショートカット系
