@@ -1,0 +1,46 @@
+onboarding = false
+
+[ui.toast]
+delivery = "system"
+
+[theme]
+[theme.custom]
+sidebar_bg = "reset"
+active_row_bg = "#535353" # Agent背景色
+selection_bg = "#9b9b9b"
+panel_bg = "reset"
+accent = "#d78b3d"        # 枠・タブの選択色
+green = "#00a916"
+blue = "#4c80fd"
+red = "#ff001a"
+yellow = "#d59000"
+overlay0 = "#ffffff"
+overlay1 = "#ffffff"
+
+[keys]
+prefix = "super+b"
+workspace_picker = ["prefix+w", "super+n"]
+
+## agent
+focus_agent = "super+shift+1..9"
+
+## pane
+split_vertical = "super+shift+enter"
+split_horizontal = "super+ctrl+shift+enter"
+focus_pane_left = "super+shift+h"
+focus_pane_down = "super+shift+j"
+focus_pane_up = "super+shift+k"
+focus_pane_right = "super+shift+l"
+close_pane = "super+shift+w"
+
+## tab
+new_tab = "super+shift+t"
+close_tab = "super+shift+x"
+next_tab = "super+tab"
+previous_tab = "super+shift+tab"
+rename_tab = "super+shift+r"
+
+## config
+settings = "super+shift+ctrl+s"
+help = "super+shift+s"
+reload_config = "super+shift+ctrl+c"
