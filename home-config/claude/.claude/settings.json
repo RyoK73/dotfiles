@@ -4,8 +4,10 @@
   },
   "permissions": {
     "allow": [
+      "Read(~/dev/*)",
+      "Read(~/.config/*)",
+      "Read(~/.claude/*)",
       "mcp__voicevox__speak",
-      "Read",
       "Bash(ls *)",
       "Bash(grep *)",
       "Bash(find *)",
@@ -33,8 +35,8 @@
       "Bash(gh label edit*)",
       "Bash(for *)",
       "Edit($HOME/.claude/discussion-history)",
-      "Edit(**/.git/pr-review/**/*.md)",
-      "Edit(**/.git/grill-me/**/*.md)",
+      "Edit(~/**/.git/pr-reviews/*.md)",
+      "Edit(~/**/.git/grill-me/*.md)",
       "Edit(~/dev/zkhub/**/*.md)",
       "WebSearch",
       "WebFetch(domain:github.com)"
