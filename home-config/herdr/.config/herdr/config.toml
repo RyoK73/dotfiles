@@ -19,7 +19,6 @@ overlay1 = "#ffffff"
 
 [keys]
 prefix = "super+b"
-workspace_picker = ["prefix+w", "super+n"]
 
 ## agent
 focus_agent = "super+shift+1..9"
@@ -44,3 +43,6 @@ rename_tab = "super+shift+r"
 settings = "super+shift+ctrl+s"
 help = "super+shift+s"
 reload_config = "super+shift+ctrl+c"
+
+## navi
+goto = "super+n"
