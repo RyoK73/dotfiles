@@ -127,3 +127,8 @@ function git-worktree-cut() {
 	echo
 	git branch
 }
+
+# ---
+# herdr版: merge済みのworktree・workspace・ブランチ・briefを削除する
+# ---
+alias hdc="$HOME/.claude/herdr/cut.sh"
