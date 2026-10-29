@@ -23,6 +23,7 @@ alias lsc="ls -a1 | cat"
 alias hx="helix"
 alias nv="nvim"
 alias hd="herdr"
+alias hdwsp-create="herdr workspace create --cwd"
 alias prc="prettier -c"
 alias prw="prettier -w"
 
