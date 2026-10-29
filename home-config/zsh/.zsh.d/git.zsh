@@ -114,14 +114,12 @@ function git-worktree-cut() {
 
 	git pull --rebase origin main
 
-	git branch -vv | grep ': gone' | awk '{
-    if ($1 == "+") {
-      gsub(/[()]/,"",$4); print $2,$4
-    } else { print $1,"" }
-  }' | while read branch wt_path; do
-		[[ -n "$wt_path" ]] && git worktree remove "$wt_path"
-		git branch -D "$branch"
-	done
+	git for-each-ref --format='%(refname:short)%09%(upstream:track)%09%(worktreepath)' refs/heads \
+		| while IFS=$'\t' read -r branch track wt_path; do
+			[[ "$track" == "[gone]" ]] || continue
+			[[ -n "$wt_path" ]] && git worktree remove "$wt_path"
+			git branch -D "$branch"
+		done
 	echo
 	echo 💫残りのローカルブランチ💫
 	echo
