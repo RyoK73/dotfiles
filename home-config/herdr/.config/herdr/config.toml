@@ -10,10 +10,10 @@ active_row_bg = "#535353" # Agent背景色
 selection_bg = "#9b9b9b"
 panel_bg = "reset"
 accent = "#d78b3d"        # 枠・タブの選択色
-green = "#00a916"
-blue = "#4c80fd"
-red = "#ff001a"
-yellow = "#d59000"
+green = "#00be86"
+blue = "#004f95"
+red = "#ff555d"
+yellow = "#bd9539"
 overlay0 = "#ffffff"
 overlay1 = "#ffffff"
 
