@@ -1,6 +1,6 @@
 ---
 name: herdr-start
-description: 新機能の実装を始めるために、herdrのworktree workspaceを作り、新しいworkspaceでClaude Codeを起動して /grill-me-develop の壁打ちを始める。「この機能を別ブランチで進めたい」「worktreeを切って壁打ちを始めて」など、機能ごとにworktreeとworkspaceを分けたい場面で使う。
+description: 実装前のブランチ分割の壁打ち専用チャットモード。計画や設計についてユーザーを徹底的にインタビューし、決定木の各分岐を解決しながら共通理解に達する。その後、新機能の実装を始めるために、herdrのworktree workspaceを作り、新しいworkspaceでClaude Codeを起動して /grill-me-develop の壁打ちを始める。「この機能を別ブランチで進めたい」「worktreeを切って壁打ちを始めて」など、機能ごとにworktreeとworkspaceを分けたい場面で使う。
 argument-hint: [実装したい機能の説明（省略可）]
 ---
 
@@ -8,7 +8,7 @@ argument-hint: [実装したい機能の説明（省略可）]
 
 ## 概要
 
-メインのworkspaceで話した内容をもとに、機能ごとのgit worktreeとherdrのworkspaceを作る。
+壁打ちした内容をもとに、機能ごとのgit worktreeとherdrのworkspaceを作る。
 新しいworkspaceではClaude Codeが `/grill-me-develop` で起動し、機能の説明（brief）を読んで壁打ちを始める。
 実処理は `~/.claude/herdr/plant.sh` が行う。このスキルは、ブランチ名の承認とbriefの作成だけを担当する。
 
@@ -22,10 +22,15 @@ echo "$HERDR_PANE_ID"
 
 ## 手順
 
-### Step 1: 機能の把握
+### Step 1: 壁打ちフェーズ
 
-`$ARGUMENTS` と、これまでの会話から、実装したい機能を把握する。
-足りない情報があれば、ユーザーに質問する。
+ユーザーの希望のあらゆる側面について、共通理解に達するまで容赦なくインタビューを行う。設計ツリーの各分岐を一つずつ辿り、決定間の依存関係を順番に解決していく。
+
+質問は一度に一つずつ行うこと。
+
+コードベースを調べることで答えられる質問がある場合は、インタビューの代わりにコードベースを調べること。
+
+`$ARGUMENTS` と、会話から、実装したい機能を把握する。
 
 ### Step 2: ブランチ名の承認
 
