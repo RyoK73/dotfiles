@@ -5,6 +5,7 @@
   "permissions": {
     "allow": [
       "Read(~/dev/**/*)",
+      "Read(~/.gitmessage)",
       "Read(~/.config/*)",
       "Read(~/.claude/*)",
       "mcp__voicevox__speak",
