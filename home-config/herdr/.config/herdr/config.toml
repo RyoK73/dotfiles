@@ -8,6 +8,9 @@ hide_tab_bar_when_single_tab = true
 [ui.toast]
 delivery = "system"
 
+[ui.sidebar.spaces]
+rows = [["$num", "state_icon", "workspace"], ["branch", "git_status"]]
+
 [theme]
 [theme.custom]
 sidebar_bg = "reset"

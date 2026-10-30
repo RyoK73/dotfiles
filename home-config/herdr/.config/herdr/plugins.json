@@ -1,0 +1,62 @@
+[
+  {
+    "plugin_id": "numbered-workspaces",
+    "name": "Numbered Workspaces",
+    "version": "0.3.0",
+    "min_herdr_version": "0.7.4",
+    "description": "Mirror each space's ordinal into a metadata token so the sidebar can show it.",
+    "manifest_path": "/home/taruroma/.config/herdr/plugins/github-installations/numbered-workspaces-b180d9d59454/3115845-0/checkout/herdr-plugin.toml",
+    "plugin_root": "/home/taruroma/.config/herdr/plugins/github-installations/numbered-workspaces-b180d9d59454/3115845-0/checkout",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "actions": [
+      {
+        "id": "renumber",
+        "title": "Renumber spaces",
+        "contexts": [
+          "global"
+        ],
+        "command": [
+          "./renumber.sh"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "on": "workspace.closed",
+        "command": [
+          "./renumber.sh"
+        ]
+      },
+      {
+        "on": "workspace.created",
+        "command": [
+          "./renumber.sh"
+        ]
+      },
+      {
+        "on": "workspace.focused",
+        "command": [
+          "./renumber.sh"
+        ]
+      },
+      {
+        "on": "workspace.moved",
+        "command": [
+          "./renumber.sh"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "abrose",
+      "repo": "herdr-numbered-workspaces",
+      "resolved_commit": "a204b92ddecf177d5ade2279e65cf193139762fb",
+      "managed_path": "/home/taruroma/.config/herdr/plugins/github-installations/numbered-workspaces-b180d9d59454/3115845-0/checkout",
+      "installed_unix_ms": 1793357399843
+    }
+  }
+]
