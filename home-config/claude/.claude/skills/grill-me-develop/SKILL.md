@@ -34,13 +34,12 @@ description: 実装の壁打ち専用チャットモード。計画や設計に�
 
 ## 壁打ち内容の保存（実装方法を問わず必須）
 
-壁打ち内容を、本体リポジトリの `.git` 直下に保存する。
-コミット対象や `.gitignore` に影響させない。
-worktree で実行しても、全worktreeの壁打ち内容が本体の `.git` に集まる。
+壁打ち内容を、`record-path.sh` が決める `<repo>.worktree/grill-me/` に保存する。
+リポジトリの外なので、コミット対象や `.gitignore` に影響しない。
+worktree で実行しても、全worktreeの壁打ち内容が同じ場所に集まる。
 
 ```bash
-dir="$(git rev-parse --path-format=absolute --git-common-dir)/grill-me"
-mkdir -p "$dir"
+dir="$(~/.claude/herdr/record-path.sh grill-me)"
 file="$dir/$(date +%Y-%m-%d)-{テーマのスラッグ}.md"
 ```
 

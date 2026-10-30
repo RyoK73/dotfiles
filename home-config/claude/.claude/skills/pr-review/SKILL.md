@@ -311,12 +311,12 @@ Issueにした指摘は、マージ可否の判定に含めない。
 
 ターミナルへ出力したレポートと同じ内容を、Markdownファイルとして保存する。
 ただし保存ファイルでは表を使わず、下記の「保存ファイルの書式」に従う。
-保存先は本体リポジトリの `.git` 直下とし、コミット対象や `.gitignore` に影響させない。
-worktree で実行しても、全worktreeのレビューが本体の `.git` に集まる。
+保存先は `record-path.sh` が決める `<repo>.worktree/pr-reviews/` とする。
+リポジトリの外なので、コミット対象や `.gitignore` に影響しない。
+worktree で実行しても、全worktreeのレビューが同じ場所に集まる。
 
 ```bash
-dir="$(git rev-parse --path-format=absolute --git-common-dir)/pr-reviews"
-mkdir -p "$dir"
+dir="$(~/.claude/herdr/record-path.sh pr-reviews)"
 branch="$(git branch --show-current | tr '/' '-')"
 file="$dir/${branch}_$(date +%Y-%m-%d_%H%M).md"
 ```
