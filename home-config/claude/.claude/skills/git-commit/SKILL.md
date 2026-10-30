@@ -57,7 +57,7 @@ git add -- <path>...
 書式は次の結果に従う。
 
 ```bash
-cat ~/.gitmessage
+Read ~/.gitmessage
 ```
 
 **基本書式**

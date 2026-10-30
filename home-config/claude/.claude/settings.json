@@ -50,7 +50,8 @@
       "Bash(gh secret *)",
       "Bash(gh release create*)",
       "Read(**/.env*)",
-      "Bash(sudo *)"
+      "Bash(sudo *)",
+      "Bash(cat*)"
     ],
     "defaultMode": "default"
   },
