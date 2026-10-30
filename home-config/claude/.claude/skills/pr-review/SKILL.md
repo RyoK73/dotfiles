@@ -318,7 +318,7 @@ worktree で実行しても、全worktreeのレビューが同じ場所に集ま
 ```bash
 dir="$(~/.claude/herdr/record-path.sh pr-reviews)"
 branch="$(git branch --show-current | tr '/' '-')"
-file="$dir/${branch}_$(date +%Y-%m-%d_%H%M).md"
+file="$dir/$(date +%Y-%m-%d_%H%M)_${branch}.md"
 ```
 
 - ファイル名は `YYYY-MM-DD_HHMM_{ブランチ名}.md` とする。
@@ -345,7 +345,6 @@ file="$dir/${branch}_$(date +%Y-%m-%d_%H%M).md"
 
 - 保存時は、「ブランチで修正」と決まった指摘を `- [ ] 修正済み` で出力する。
 - 「Issueにする」と決まった指摘は、チェックボックスではなく `- Issue化済み: #番号` で出力する。
-- フェーズ8の再レビューで修正を確認できた指摘は、元の保存ファイルの該当チェックボックスを `[x]` に更新する。
 - 未修正・新規の指摘は、フェーズ8の再レポートに従い新しい日時のファイルへ `[ ]` で保存する。
 
 ## フェーズ8: 修正・実装チェック
