@@ -4,7 +4,7 @@
   },
   "permissions": {
     "allow": [
-      "Read(~/dev/*)",
+      "Read(~/dev/**/*)",
       "Read(~/.config/*)",
       "Read(~/.claude/*)",
       "mcp__voicevox__speak",
