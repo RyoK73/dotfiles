@@ -1,5 +1,10 @@
 onboarding = false
 
+[ui]
+pane_borders = "always"
+show_agent_labels_on_pane_borders = true
+hide_tab_bar_when_single_tab = true
+
 [ui.toast]
 delivery = "system"
 
@@ -20,9 +25,6 @@ overlay1 = "#ffffff"
 [keys]
 prefix = "super+b"
 
-## agent
-focus_agent = "super+shift+1..9"
-
 ## pane
 split_vertical = "super+shift+enter"
 split_horizontal = "super+ctrl+shift+enter"
@@ -31,6 +33,10 @@ focus_pane_down = "super+shift+j"
 focus_pane_up = "super+shift+k"
 focus_pane_right = "super+shift+l"
 close_pane = "super+shift+w"
+swap_pane_left = "super+shift+ctrl+h"
+swap_pane_down = "super+shift+ctrl+j"
+swap_pane_up = "super+shift+ctrl+k"
+swap_pane_right = "super+shift+ctrl+l"
 
 ## tab
 new_tab = "super+shift+t"
@@ -46,3 +52,7 @@ reload_config = "super+shift+ctrl+c"
 
 ## navi
 goto = "super+n"
+
+## workspace
+new_workspace = "super+shift+n"
+switch_workspace = "super+shift+1..9"
