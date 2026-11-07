@@ -130,3 +130,11 @@ function git-worktree-cut() {
 # herdr版: merge済みのworktree・workspace・ブランチ・briefを削除する
 # ---
 alias hdc="$HOME/.claude/herdr/cut.sh"
+
+# ---
+# herdr版: worktreeとworkspaceを作る(Claude Codeは起動しない)
+# ---
+alias hdp="herdr-worktree-plant"
+function herdr-worktree-plant() {
+	"$HOME/.claude/herdr/create.sh" "$@"
+}
