@@ -27,7 +27,7 @@ return {
         lualine_b = { "diff" },
         lualine_c = { "diagnostics", { "filetype", icon_only = true }, { "filename", path = 2 } },
         lualine_x = { "searchcount" },
-        lualine_y = { { count_selection, cond = is_visual }, "location" },
+        lualine_y = { { count_selection, cond = is_visual }, "%l/%L line" },
         lualine_z = { "progress" },
       },
       --[[add your custom lualine config here]]
