@@ -33,6 +33,9 @@ alias gpl-r="git pull --rebase"
 # ---
 alias gst="git status"
 alias gd="git diff"
+alias gds="git diff --staged"
+alias gres="git restore --staged"
+alias gresh="git reset HEAD"
 
 alias gss="git stash push -m"
 alias gsp="git stash pop"
