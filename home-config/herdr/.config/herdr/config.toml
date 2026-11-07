@@ -3,7 +3,17 @@ onboarding = false
 [ui]
 pane_borders = "always"
 show_agent_labels_on_pane_borders = true
-hide_tab_bar_when_single_tab = true
+hide_tab_bar_when_single_tab = false
+tab_bar_right = [
+  { type = "text", text = "super+shift+s:help" },
+  { type = "text", text = "super+n:goto" },
+  { type = "text", text = "super+shift+enter:split" },
+  { type = "text", text = "super+shift+h/j/k/l:focus" },
+  { type = "text", text = "super+shift+w:close" },
+  { type = "text", text = "super+shift+n:new-ws" },
+  { type = "text", text = "super+shift+1..9:ws" },
+]
+tab_bar_right_separator = "  "
 
 [ui.toast]
 delivery = "system"
@@ -46,7 +56,6 @@ new_tab = "super+shift+t"
 close_tab = "super+shift+x"
 next_tab = "super+tab"
 previous_tab = "super+shift+tab"
-rename_tab = "super+shift+r"
 
 ## config
 settings = "super+shift+ctrl+s"
@@ -59,3 +68,4 @@ goto = "super+n"
 ## workspace
 new_workspace = "super+shift+n"
 switch_workspace = "super+shift+1..9"
+rename_workspace = "super+shift+r"
