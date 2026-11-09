@@ -59,6 +59,7 @@
 |---|---|---|
 | /create-issue | — | 単発のGitHub Issueを1件作成。タイトル・本文・ラベル案を確認後 `gh issue create` で作成。他スキル（/pr-review など）が承認済みで呼んだ場合は、案の承認を省略 |
 | /create-issues | — | /map や /launch で練った構想をGitHub Issuesに一括作成 |
+| /add-rule | [追加したいルールの内容] | 言語・ツールごとのこだわりを、グローバルの `~/.claude/rules/` にpaths付きrulesとして追記。配置先とpathsの決定、既存ルールとの重複・矛盾の検出まで行う。保存先はdotfiles側で、反映にはstowが必要 |
 | /herdr-start | [実装したい機能の説明（省略可）] | 機能ごとにherdrのworktree workspaceを作り、新workspaceでClaude Codeを起動して /grill-me-develop の壁打ちを始める。ブランチ名の承認とbrief作成は本スキル、実処理は `~/.claude/herdr/plant.sh`。マージ済みの片付けは `hdc`（`~/.claude/herdr/cut.sh`） |
 
 ## スキルの追加・変更・削除
@@ -97,3 +98,4 @@
 - `~/.claude/skills/check-document-en/SKILL.md`
 - `~/.claude/skills/git-commit/SKILL.md`
 - `~/.claude/skills/herdr-start/SKILL.md`
+- `~/.claude/skills/add-rule/SKILL.md`
