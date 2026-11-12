@@ -8,46 +8,27 @@
     "manifest_path": "/home/taruroma/.config/herdr/plugins/github-installations/ws.numbered.hr.dhananjay-385de4fc7428/1155593-0/checkout/herdr-plugin.toml",
     "plugin_root": "/home/taruroma/.config/herdr/plugins/github-installations/ws.numbered.hr.dhananjay-385de4fc7428/1155593-0/checkout",
     "enabled": true,
-    "platforms": [
-      "linux",
-      "macos",
-      "windows"
-    ],
+    "platforms": ["linux", "macos", "windows"],
     "events": [
       {
         "on": "workspace.closed",
-        "command": [
-          "python3",
-          "numbered.py"
-        ]
+        "command": ["python3", "numbered.py"]
       },
       {
         "on": "workspace.created",
-        "command": [
-          "python3",
-          "numbered.py"
-        ]
+        "command": ["python3", "numbered.py"]
       },
       {
         "on": "workspace.moved",
-        "command": [
-          "python3",
-          "numbered.py"
-        ]
+        "command": ["python3", "numbered.py"]
       },
       {
         "on": "workspace.renamed",
-        "command": [
-          "python3",
-          "numbered.py"
-        ]
+        "command": ["python3", "numbered.py"]
       },
       {
         "on": "workspace.reordered",
-        "command": [
-          "python3",
-          "numbered.py"
-        ]
+        "command": ["python3", "numbered.py"]
       }
     ],
     "source": {
