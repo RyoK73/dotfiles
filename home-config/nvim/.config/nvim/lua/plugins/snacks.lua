@@ -19,5 +19,11 @@ return {
         },
       },
     },
+    indent = {
+      enabled = true,
+      scope = {
+        enabled = false,
+      },
+    },
   },
 }
