@@ -11,6 +11,7 @@ source "$ZSHHOME/functions.zsh"
 source "$ZSHHOME/prompt.zsh"
 source "$ZSHHOME/git.zsh"
 source "$ZSHHOME/claude.zsh"
+source "$ZSHHOME/herdr.zsh"
 source "$ZSHHOME/keymap.zsh"
 source "$ZSHHOME/zk.zsh"
 
