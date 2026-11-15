@@ -41,7 +41,7 @@
     {
       "context": "Autocomplete",
       "bindings": {
-        "tab+space": "autocomplete:accept",
+        "ctrl+space": "autocomplete:accept",
         "shift+tab": "autocomplete:previous",
         "tab": "autocomplete:next",
         "escape": "autocomplete:dismiss",
