@@ -58,14 +58,14 @@ cd dotfiles
 - To `$HOME/`:
   ```bash
   cd ./home-config
-  stow --adopt {symlink name},{symlink name},{symlink name}...
-  git checkout -- .
+  stow --adopt *
+  git restore .
   ```
 - To `/`(need Administrator Permission):
   ```bash
   cd ./root-config
-  sudo stow --adopt {symlink name},{symlink name},{symlink name}...
-  git checkout -- .
+  stow --adopt *
+  git restore .
   ```
 
 ## Utility aliases and functions
