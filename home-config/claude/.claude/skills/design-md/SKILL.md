@@ -1,9 +1,10 @@
 ---
 name: design-md
 description: Google Stitch仕様のDESIGN.md（ブランド・デザインシステムをYAMLトークン＋Markdown説明で記述する形式）を生成する。既存コードベースの解析、参考にしたいUI/サービス（URLまたはサービス名）の調査、対話ヒアリングを組み合わせてデザイントークンを抽出し、カレントディレクトリ直下にDESIGN.mdを作成・更新したいときに使う。「design.mdを作りたい」「〇〇みたいなUI/デザインにしたい」「デザインシステムを文書化したい」というときに使う。
+argument-hint: [参考にしたいUI・サービス名やURL（省略可）]
 ---
 
-DESIGN.mdは、ブランド・デザインシステムをAIエージェントに伝えるための自己完結型フォーマット。YAML frontmatter（機械可読トークン）とMarkdown本文（人間可読の説明）の2部構成で、詳細な仕様は `references/spec.md` を参照すること（トークンスキーマ、9セクションの定義・順序、記述例を網羅している）。**生成作業に入る前に必ず一度 `references/spec.md` を読み込むこと。**
+DESIGN.mdは、ブランド・デザインシステムをAIエージェントに伝えるための自己完結型フォーマット。YAML frontmatter（機械可読トークン）とMarkdown本文（人間可読の説明）の2部構成で、詳細な仕様は `references/spec.md` を参照すること（トークンスキーマ、8セクションの定義・順序、記述例を網羅している）。**生成作業に入る前に必ず一度 `references/spec.md` を読み込むこと。**
 
 以下の4フェーズで進める。各フェーズを飛ばさず順番に実行すること。
 
@@ -31,7 +32,7 @@ DESIGN.mdは、ブランド・デザインシステムをAIエージェントに
 `references/spec.md` の仕様に厳密に従い、以下を生成する。
 
 - **YAML frontmatter**: `version: alpha`, `name`, `description`, `colors`（`primary`は必須）, `typography`, `rounded`, `spacing`, `components` を、承認されたドラフトに基づき記述。トークン名は英語（`primary`, `body-md`等）。可能な箇所は `{colors.primary}` のようなトークン参照を使い重複を避ける。
-- **Markdown本文**: 9セクション（Overview / Colors / Typography / Layout / Elevation & Depth / Shapes / Components / Do's and Don'ts）を規定順序で`##`見出しにより記述。本文の説明文は日本語で書く（トークン名自体は英語のまま）。関連情報がなければそのセクションは省略してよい。
+- **Markdown本文**: 8セクション（Overview / Colors / Typography / Layout / Elevation & Depth / Shapes / Components / Do's and Don'ts）を規定順序で`##`見出しにより記述。本文の説明文は日本語で書く（トークン名自体は英語のまま）。関連情報がなければそのセクションは省略してよい。
   - **Components**: フェーズ1で実際に検出できたコンポーネントを優先して記載する。検出が乏しい場合はbutton/input/card/chip/modal等の一般的なコンポーネントセットで補い、その旨が分かるようにする。
   - **Do's and Don'ts**: 定めた主要な色の組み合わせ（例: 本文テキスト色×背景色）についてコントラスト比を計算し、WCAG AA基準（通常テキスト4.5:1、大きいテキスト3:1）を満たすか確認する。満たさない組み合わせがあれば「Don't」項目として明記し、代替案を提案する。
 

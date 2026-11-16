@@ -1,101 +1,49 @@
 # カスタムスキル一覧
 
-## 思考・設計
+## 壁打ち・設計
 
 | スキル | 引数 | 説明 |
 |---|---|---|
-| /think | [テーマ・問題] | アイデアの壁打ち。実装はしない思考パートナー |
-| /guide | [テーマ・問題] | 師匠モード。設計・実装前に体系的な知識を注入する |
-| /map | [@ファイル（省略可）] | 頭の霧を晴らし課題を具体化。ドキュメント＆GitHub Issue保存 |
-| /retro | [実装・設計] | 実装後の振り返り。狂言・能口調で設計と判断を共に見直す |
-| /launch | [プロジェクト名] | MVPキックオフ。目標→設計→タスク分解→実行ランウェイ生成 |
-| /grill-me-develop | — | 実装の壁打ち。決定木を辿ってインタビューし、リスクの高い部分のテスト項目を確定。`<repo>.worktree/grill-me/` に必ず保存して保存先を案内した後、claude実装か自力実装かを選べる |
-| /grill-me-simple | — | 実装の壁打ち（簡易版）。決定木を辿ってインタビューするのみ。テスト項目の確定・保存・実装は行わない |
-
-## ナレッジ管理
-
-| スキル | 引数 | 説明 |
-|---|---|---|
-| /research | [トピック] | 調査→Zettelkasten文献ノート作成 |
-| /zettel | [テーマ] | 永続ノート（Zettelkasten）作成 |
-| /devnote | [範囲・内容] | 開発メモ・デバッグ解決策を literature/ に保存 |
-| /capture | [内容] | 思いつきをすぐInboxへ。対話不要 |
-| /analyzeGTD | — | GTD＋Zettelkastenデータを分析してパターンを可視化 |
-
-## GTD・タスク管理
-
-| スキル | 引数 | 説明 |
-|---|---|---|
-| /morning | — | 朝のプランニング。GitHub Issue同期＋今日の計画 |
-| /daily-log | — | 日次振り返りを記録 |
-| /weekly-review | — | GTD週次レビュー。Issue同期＋振り返り＋次週計画 |
-| /gtd-inbox | — | Inbox整理。アイテムを1件ずつ対話形式で処理 |
-
-## 転職活動
-
-| スキル | 引数 | 説明 |
-|---|---|---|
-| /tennsyoku | — | 転職活動ダッシュボード。全体状況を俯瞰 |
-| /job-research | [企業名] | 企業調査→ career/companies/ にプロファイル作成 |
-| /job-track | [企業名・ステータス] | 応募・選考状況の記録と更新 |
-| /interview-prep | [企業名・テーマ] | 面接対策・自己分析 |
-| /curriculum | [目標・フェーズ] | 学習ロードマップの表示・更新 |
-
-## 開発・コードレビュー
-
-| スキル | 引数 | 説明 |
-|---|---|---|
-| /task-plan | [issue番号・URL（省略可）] | 現ブランチ・issue消化タスクを詳細洗い出し、docs/task/{branch}-task.mdにチェックボックス形式で保存。進捗管理も兼ねる |
-| /pr-review | [PRタイトルのヒント] | 変更の意図・設計を壁打ちし、5観点レビュー後にPR下書き作成。指摘には根拠（確認済み / 推測）を付け、静的検査・呼び出し元・関連定義を確認してから書く。レポートはファイル別に指摘を列記し、`<repo>.worktree/pr-reviews/{branch}_日時.md` にも保存（リポジトリ外）。Issueにする指摘は、一覧承認後に `/create-issue` で1件ずつ、案の承認を得て作成 |
-| /post-review | [記事ファイルパス or slug] | ブログ記事を5軸で監査。公開前の品質チェック |
+| /grill | [壁打ちしたい計画・やりたいこと] | 壁打ち → プラン → 実行。決定木を辿ってインタビューし、決定事項を要約して確認した後、プランモードでプランを作って実行する。コード以外(設定・ドキュメント・構成の見直し)にも使う。alias `cct` からも起動できる |
+| /grill-tdd | [実装したい機能・briefのパス] | 壁打ち → テスト項目の確定 → 記録の保存 → 実装。リスクの高い部分のテスト項目(仕様)を確定し、`<repo>.worktree/grill-me/` に必ず保存して保存先を案内した後、claude実装(テストを先に書く)か自力実装かを選べる |
+| /herdr-start | [実装したい機能の説明（省略可）] | 機能ごとにherdrのworktree workspaceを作り、新workspaceでClaude Codeを起動して /grill-tdd の壁打ちを始める。ブランチの範囲の壁打ち、ブランチ名の承認、brief作成は本スキル、実処理は `~/.claude/herdr/plant.sh`。マージ済みの片付けは `hdc`（`~/.claude/herdr/cut.sh`） |
 | /design-md | [参考UI/サービス名やURL（省略可）] | Stitch仕様のDESIGN.md生成。コード解析＋参考UI調査＋対話でトークン抽出 |
-| /git-commit | [wip（省略可）] | ステージ済みの変更から `~/.gitmessage` 準拠の英語コミットメッセージ案を作り、確認後にコミット。pushは対象外 |
-| /translate-to-english | [ファイル・ディレクトリパス（省略可）] | 日本語のコメント・docstring・文字列を英訳しレビュー後コミット。省略時は未コミット変更全体が対象 |
-| /check-document-en | [英文ドキュメント本文] | 英文の文法・自然さをチェック。修正文→追記案→指摘→文法ポイントの順で出力 |
 
-## その他
+## 開発・レビュー
 
 | スキル | 引数 | 説明 |
 |---|---|---|
-| /create-issue | — | 単発のGitHub Issueを1件作成。タイトル・本文・ラベル案を確認後 `gh issue create` で作成。他スキル（/pr-review など）が承認済みで呼んだ場合は、案の承認を省略 |
-| /create-issues | — | /map や /launch で練った構想をGitHub Issuesに一括作成 |
+| /git-commit | [wip（省略可）] | ステージ済みの変更から `~/.gitmessage` 準拠の英語コミットメッセージ案を作り、確認後にコミット。`wip` を渡すと作業途中のコミットにする。pushは対象外 |
+| /pr-review | [PRタイトルのヒント] | 変更の意図・設計を壁打ちし、6観点(セキュリティ・可読性・パフォーマンス・影響範囲・エラーハンドリング・テスト)でレビュー後にPR下書き作成。指摘には根拠（確認済み / 推測）を付ける。レポートは `<repo>.worktree/pr-reviews/{日時}_{branch}.md` にも保存（リポジトリ外）。同じブランチの前回レポートがあれば、未修正の指摘の確認から再開できる。Issueにする指摘は、一覧承認後に `/create-issue` で1件ずつ、案の承認を得て作成 |
+| /create-issue | [Issueにしたい内容（省略可）] | GitHub Issueを1件作成。タイトル・本文・ラベル案を確認後 `gh issue create` で作成。複数作るときは1件ずつ繰り返す。他スキル（/pr-review など）から呼ばれた場合も、案の承認は省略しない |
+
+## 文章
+
+| スキル | 引数 | 説明 |
+|---|---|---|
+| /check-document-en | [チェックしたい英文] | 自分で書いた英文(コミットメッセージ・コードコメント・READMEなど)の文法・自然さをチェック。修正文→追記案→指摘の順で出力。alias `cce` からも起動できる |
+| /post-review | [記事ファイルパス or slug] | ブログ記事を5軸で監査。公開前の品質チェック |
+
+## 設定
+
+| スキル | 引数 | 説明 |
+|---|---|---|
 | /add-rule | [追加したいルールの内容] | 言語・ツールごとのこだわりを、グローバルの `~/.claude/rules/` にpaths付きrulesとして追記。配置先とpathsの決定、既存ルールとの重複・矛盾の検出まで行う。保存先はdotfiles側で、反映にはstowが必要 |
-| /herdr-start | [実装したい機能の説明（省略可）] | 機能ごとにherdrのworktree workspaceを作り、新workspaceでClaude Codeを起動して /grill-me-develop の壁打ちを始める。ブランチ名の承認とbrief作成は本スキル、実処理は `~/.claude/herdr/plant.sh`。マージ済みの片付けは `hdc`（`~/.claude/herdr/cut.sh`） |
+
+`/omarchy` は Omarchy が提供するスキルで、dotfiles の管理外のため、この一覧では管理しない。
 
 ## スキルの追加・変更・削除
 
 `~/.claude/skills/` 配下に `{スキル名}/SKILL.md` を追加・変更・削除したときは、このファイルのインデックスも更新すること。
 
 各スキルのファイル:
-- `~/.claude/skills/think/SKILL.md`
-- `~/.claude/skills/guide/SKILL.md`
-- `~/.claude/skills/map/SKILL.md`
-- `~/.claude/skills/retro/SKILL.md`
-- `~/.claude/skills/launch/SKILL.md`
-- `~/.claude/skills/grill-me-develop/SKILL.md`
-- `~/.claude/skills/grill-me-simple/SKILL.md`
-- `~/.claude/skills/research/SKILL.md`
-- `~/.claude/skills/zettel/SKILL.md`
-- `~/.claude/skills/devnote/SKILL.md`
-- `~/.claude/skills/capture/SKILL.md`
-- `~/.claude/skills/analyzeGTD/SKILL.md`
-- `~/.claude/skills/morning/SKILL.md`
-- `~/.claude/skills/daily-log/SKILL.md`
-- `~/.claude/skills/weekly-review/SKILL.md`
-- `~/.claude/skills/gtd-inbox/SKILL.md`
-- `~/.claude/skills/tennsyoku/SKILL.md`
-- `~/.claude/skills/job-research/SKILL.md`
-- `~/.claude/skills/job-track/SKILL.md`
-- `~/.claude/skills/interview-prep/SKILL.md`
-- `~/.claude/skills/curriculum/SKILL.md`
-- `~/.claude/skills/create-issue/SKILL.md`
-- `~/.claude/skills/create-issues/SKILL.md`
-- `~/.claude/skills/task-plan/SKILL.md`
-- `~/.claude/skills/pr-review/SKILL.md`
-- `~/.claude/skills/post-review/SKILL.md`
-- `~/.claude/skills/design-md/SKILL.md`
-- `~/.claude/skills/translate-to-english/SKILL.md`
-- `~/.claude/skills/check-document-en/SKILL.md`
-- `~/.claude/skills/git-commit/SKILL.md`
+- `~/.claude/skills/grill/SKILL.md`
+- `~/.claude/skills/grill-tdd/SKILL.md`
 - `~/.claude/skills/herdr-start/SKILL.md`
+- `~/.claude/skills/design-md/SKILL.md`
+- `~/.claude/skills/git-commit/SKILL.md`
+- `~/.claude/skills/pr-review/SKILL.md`
+- `~/.claude/skills/create-issue/SKILL.md`
+- `~/.claude/skills/check-document-en/SKILL.md`
+- `~/.claude/skills/post-review/SKILL.md`
 - `~/.claude/skills/add-rule/SKILL.md`
