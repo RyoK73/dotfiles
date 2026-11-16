@@ -1,5 +1,5 @@
 #!/bin/bash
-# herdrのworktree workspaceを作り、新しいworkspaceでClaude Codeを起動して壁打ち(/grill-me-develop)を始める。
+# herdrのworktree workspaceを作り、新しいworkspaceでClaude Codeを起動して壁打ち(/grill-tdd)を始める。
 # 作成はcreate.sh、Claude起動はgrill.shが行う。ここはそれらをつなぐ入口。
 #
 # usage (git リポジトリ内で実行する): plant.sh <branch> <brief-file>

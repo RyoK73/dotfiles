@@ -24,14 +24,14 @@ function cc() {
 	claude --name "$1"
 }
 
-# claude codeをthinkモードで呼び出す
+# claude codeを壁打ち(/grill)で呼び出す
 function cct() {
 	if [[ -z "$1" ]]; then
 		echo "セッション名を指定してください"
-		echo "例：cc session-name"
+		echo "例：cct session-name"
 		return 1
 	fi
-	claude /think --name "think-${1}"
+	claude /grill --name "think-${1}"
 }
 
 # claude skill 一覧の呼び出し関数

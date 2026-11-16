@@ -1,5 +1,5 @@
 #!/bin/bash
-# briefを所定の場所に移し、指定したherdrペインでClaude Codeを起動して壁打ち(/grill-me-develop)を始める。
+# briefを所定の場所に移し、指定したherdrペインでClaude Codeを起動して壁打ち(/grill-tdd)を始める。
 #
 # usage (git リポジトリ内で実行する): grill.sh <branch> <brief-file> <pane_id>
 #   <branch>      対象のブランチ名
@@ -24,6 +24,6 @@ brief_dir=$("$script_dir/record-path.sh" brief)
 brief_path="$brief_dir/$branch.md"
 mv "$brief_src" "$brief_path"
 
-herdr pane run "$pane_id" "claude \"/grill-me-develop $brief_path を読んで、この機能の壁打ちを始めてください\"" >/dev/null
+herdr pane run "$pane_id" "claude \"/grill-tdd $brief_path を読んで、この機能の壁打ちを始めてください\"" >/dev/null
 
 echo "brief:     $brief_path"
