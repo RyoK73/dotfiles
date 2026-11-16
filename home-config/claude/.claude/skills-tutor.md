@@ -6,7 +6,7 @@
 |---|---|---|
 | /grill | [壁打ちしたい計画・やりたいこと] | 壁打ち → プラン → 実行。決定木を辿ってインタビューし、決定事項を要約して確認した後、プランモードでプランを作って実行する。コード以外(設定・ドキュメント・構成の見直し)にも使う。alias `cct` からも起動できる |
 | /grill-tdd | [実装したい機能・briefのパス] | 壁打ち → テスト項目の確定 → 記録の保存 → 実装。リスクの高い部分のテスト項目(仕様)を確定し、`<repo>.worktree/grill-me/` に必ず保存して保存先を案内した後、claude実装(テストを先に書く)か自力実装かを選べる |
-| /herdr-start | [実装したい機能の説明（省略可）] | 機能ごとにherdrのworktree workspaceを作り、新workspaceでClaude Codeを起動して /grill-tdd の壁打ちを始める。ブランチの範囲の壁打ち、ブランチ名の承認、brief作成は本スキル、実処理は `~/.claude/herdr/plant.sh`。マージ済みの片付けは `hdc`（`~/.claude/herdr/cut.sh`） |
+| /herdr-start | [実装したい機能の説明（省略可）] | 機能ごとにherdrのworktree workspaceを作り、新workspaceでClaude Codeを起動して /grill-tdd の壁打ちを始める。現状のコードを読んで事実を確認し、ブランチの範囲の壁打ち、ブランチ名の承認、briefを現状／意図／差分で作るところまでは本スキル、実処理は `~/.claude/herdr/plant.sh`。マージ済みの片付けは `hdc`（`~/.claude/herdr/cut.sh`） |
 | /design-md | [参考UI/サービス名やURL（省略可）] | Stitch仕様のDESIGN.md生成。コード解析＋参考UI調査＋対話でトークン抽出 |
 
 ## 開発・レビュー
