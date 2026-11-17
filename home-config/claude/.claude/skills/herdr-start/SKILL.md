@@ -30,9 +30,9 @@ echo "$HERDR_PANE_ID"
 
 まず、現状のコードを読む。壁打ちは、読んだコードを前提に進める。
 
-1. 最新化の確認: `git fetch origin main` を実行し、`git status -sb` と合わせて、origin/main より遅れているか、未コミットの変更があるかを確認する。
-   - 遅れている場合は、ユーザーに伝えてから読む。`pull` は `plant.sh` が行う。
-   - `create.sh` は現ブランチ（HEAD）からworktreeを作り、直前に `git pull --rebase origin main` を行う。未コミットの変更は引き継がれない。
+1. 最新化: コードを読む前に、`git pull --rebase origin main` を実行する。
+   - 未コミットの変更などで失敗したときは、エラーをそのままユーザーに伝えて終了する。`--autostash` などで回避しない。
+   - `create.sh` は現ブランチ（HEAD）からworktreeを作り、直前にも `git pull --rebase origin main` を行う。未コミットの変更は引き継がれない。
 2. `$ARGUMENTS` と、会話から、実装したい機能を把握する。Issue番号があれば `gh issue view` で読む。Issueは「意図」として扱う。
 3. 機能に関連するコード領域を特定し、`Read` で読む。
 
