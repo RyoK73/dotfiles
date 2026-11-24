@@ -5,20 +5,32 @@ return {
   opts = {
     providers = {
       search = { incsearch = true },
-      marks = { numbers = true },
+      marks = { numbers = false },
       gitsigns = true,
+      cursor = true,
     },
     scrollbar = {
-      preset = "zed",
-      autohide = true,
+      preset = "vscode",
+      autohide = false,
     },
     minimap = {
       enabled = true,
+      encoding = "braille",
+      scale = "fixed",
+      columns_per_dot = 2,
+      width = 20,
+      autohide = false,
+      floats = true,
     },
     marks = {
-      GitAdd = { text = { "┃" }, priority = 7, highlight = "GitSignsAdd" },
-      GitChange = { text = { "┃" }, priority = 7, highlight = "GitSignsChange" },
-      GitDelete = { text = { "▁" }, priority = 7, highlight = "GitSignsDelete" },
+      GitAdd = { text = { "A" }, priority = 7, highlight = "GitSignsAdd" },
+      GitChange = { text = { "C" }, priority = 7, highlight = "GitSignsChange" },
+      GitDelete = { text = { "D" }, priority = 7, highlight = "GitSignsDelete" },
+      Cursor = {
+        text = "█",
+        priority = 0,
+        highlight = { fg = "#ffffff" },
+      },
     },
   },
 }
