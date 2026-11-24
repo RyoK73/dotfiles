@@ -21,6 +21,7 @@ return {
       width = 20,
       autohide = false,
       floats = true,
+      blend = 65,
     },
     marks = {
       GitAdd = { text = { "A" }, priority = 7, highlight = "GitSignsAdd" },
