@@ -34,9 +34,9 @@ local groups = {
   -- ウィンバー / タブライン(bufferline.nvim使用中とのことなので特に重要)
   "WinBar",
   "WinBarNC",
-  "TabLine",
+  -- "TabLine",
   "TabLineFill",
-  "TabLineSel",
+  -- "TabLineSel",
   -- markdown系(見出しの背景バーやコードブロック背景)
   "@markup.heading.1.markdown",
   "@markup.heading.2.markdown",
