@@ -2,6 +2,7 @@
 require("config.lazy")
 
 -- 全体のデフォルト
+vim.g.scrollbar_v2_notice = false
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
