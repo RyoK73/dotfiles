@@ -94,7 +94,7 @@ function git-worktree-plant() {
 	# Move to the project root directory.
 	gcd
 
-	git pull --rebase origin main
+	git pull --rebase origin/main
 
 	local repo
 	repo=$(basename $(git remote get-url origin) .git) || repo=$(basename $(git rev-parse --show-toplevel)) # ディレクトリではなく、remote repositoryを基準にprefixを決定、remote repositoryがなければディレクトリ名にフォールバック

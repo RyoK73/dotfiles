@@ -31,7 +31,7 @@ if [[ -e "$worktree_path" ]]; then
 	exit 1
 fi
 
-git pull --rebase origin main >&2
+git pull --rebase origin/main >&2
 
 # mainからではなく現ブランチから生成する
 result=$(herdr worktree create --cwd "$root" --branch "$branch" --path "$worktree_path" --label "$branch" --focus)
