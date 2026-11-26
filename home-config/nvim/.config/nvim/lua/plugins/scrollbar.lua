@@ -14,7 +14,7 @@ return {
       autohide = false,
     },
     minimap = {
-      enabled = true,
+      enabled = false,
       encoding = "braille",
       scale = "fixed",
       columns_per_dot = 2,
