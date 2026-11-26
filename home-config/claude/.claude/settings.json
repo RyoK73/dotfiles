@@ -48,6 +48,8 @@
       "Bash(sed -i*)",
       "Bash(sh -c*)",
       "Bash(rm -rf*)",
+      "Bash(*git push *)",
+      "Bash(*git pr create *)",
       "Bash(cat*)"
     ],
     "deny": [
