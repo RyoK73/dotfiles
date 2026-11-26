@@ -43,7 +43,13 @@
       "WebSearch",
       "WebFetch(domain:github.com)"
     ],
-    "ask": ["Bash(python3*)", "Bash(sed -i*)", "Bash(sh -c*)"],
+    "ask": [
+      "Bash(python3*)",
+      "Bash(sed -i*)",
+      "Bash(sh -c*)",
+      "Bash(rm -rf*)",
+      "Bash(cat*)"
+    ],
     "deny": [
       "Bash(gh issue delete*)",
       "Bash(gh pr merge*)",
@@ -52,9 +58,7 @@
       "Bash(gh release create*)",
       "Read(**/.env*)",
       "Edit(**/.env*)",
-      "Bash(sudo *)",
-      "Bash(cat*)",
-      "Bash(rm -rf*)"
+      "Bash(sudo *)"
     ],
     "defaultMode": "default"
   },
